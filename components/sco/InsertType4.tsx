@@ -1,7 +1,6 @@
-import Logo from "./Logo";
-import * as Consts from "./Consts";
+import * as Consts from "../Consts";
 
-const InsertType2: React.SFC<any> = ({children, img}) => {
+const InsertType4: React.SFC<any> = ({children, img}) => {
   return (
     <React.Fragment>
       <div className="insert">
@@ -15,11 +14,12 @@ const InsertType2: React.SFC<any> = ({children, img}) => {
           display: grid;
               grid-template-areas:
             'panel1'
-            'panel2';
-          grid-row-gap: 20px;
+            'panel2'
+            'panel3';
+          grid-row-gap: 10px;
           grid-column-gap: 10px;
-          -ms-grid-rows: 50px 20px 400px;
-          grid-template-rows: 50px 400px;
+          -ms-grid-rows: 250px 10px 100px 10px 150px;
+          grid-template-rows: 250px 100px 150px;
           width: 100%;
           height: 100%;
           font-size: 0.7rem;
@@ -28,9 +28,6 @@ const InsertType2: React.SFC<any> = ({children, img}) => {
           -ms-grid-row:1;
           -ms-grid-column:1;
           grid-area: panel1;
-          font-size: 0.6rem;
-          display: flex;
-          align-items: flex-end;
           margin: 0 auto;
         }
         .panel2 {
@@ -38,6 +35,17 @@ const InsertType2: React.SFC<any> = ({children, img}) => {
           -ms-grid-column:1;
           grid-area: panel2;
           margin: 0 auto;
+          text-align: center;
+        }
+        .panel3 {
+          -ms-grid-row:5;
+          -ms-grid-column:1;
+          grid-area: panel3;
+          margin: 0 auto;
+        }
+
+        .panel1 img, .panel2 img, .panel3 img {
+          width: 420px;
         }
       `}
       </style>
@@ -45,4 +53,4 @@ const InsertType2: React.SFC<any> = ({children, img}) => {
   );
 }
 
-export default InsertType2;
+export default InsertType4;

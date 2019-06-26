@@ -1,6 +1,6 @@
 import * as React from "react";
-import Link from "./Link";
-import * as Consts from "./Consts";
+import Link from "../Link";
+import * as Consts from "../Consts";
 
 export interface IconButtonProps {
   href: string;
@@ -42,7 +42,6 @@ const IconButton: React.SFC<IconButtonProps> = ({href, icon, children, color, is
   }
 
   function _renderInnerBody() {
-    console.log(icon);
     return (
       <React.Fragment>
         <div className="iconbutton" onClick={onClick}>

@@ -16,7 +16,7 @@ const Index: React.SFC<any> = () => {
         <meta name="description" content="Carrefour C4 Project."/>
       </Head>
       <div className={'container'}>
-        <Link href="/secondpage" isRoot={true}>
+        <Link href="/firstpage" isRoot={true}>
           <img src={`${adjustIndexFolder}${Consts.GENERAL_IMG_FOLDER}homepage.png`}/>
         </Link>
       </div>

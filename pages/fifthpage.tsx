@@ -2,12 +2,12 @@ import Link from '../components/Link';
 import Head from 'next/head';
 import * as Consts from "../components/Consts";
 import { HtmlHead } from '../components/html/HtmlHead';
-import { Container } from '../components/Container';
-import Header from '../components/Header';
-import Bottom from '../components/Bottom';
-import Receipt from '../components/Receipt';
-import Button from "../components/Button";
-import InsertType3 from '../components/InsertType3';
+import { Container } from '../components/sco/Container';
+import Header from '../components/sco/Header';
+import Bottom from '../components/sco/Bottom';
+import Receipt from '../components/sco/Receipt';
+import Button from "../components/sco/Button";
+import InsertType1 from '../components/sco/InsertType1';
 import Navigator from "../components/Navigator";
 
 const FifthPage: React.SFC<any> = () => {
@@ -15,24 +15,29 @@ const FifthPage: React.SFC<any> = () => {
     <Navigator>
       <HtmlHead/>
       <Head>
-        <title>Carrefour C4 Project - 6</title>
-        <meta name="description" content="Sixth Page"/>
+        <title>Carrefour C4 Project - 5</title>
+        <meta name="description" content="Fifth Page"/>
       </Head>
-      <Link href="/sixthpage">
-        <Container>
-          <Header>Select Tender Type</Header>
-          <Receipt isCenter={true} isComplete={true}/>
-          <InsertType3>
-            <div className="panel1">
-              Please take your receipt
-            </div>
-            <div className="panel2">
-              <img src={`${Consts.GENERAL_IMG_FOLDER}img_printer.png`}/>
-            </div>
-          </InsertType3>
-          <Bottom/>
-        </Container>
-      </Link>
+      <Container>
+        <Header>Scan Item and Place in Bag</Header>
+        <Receipt/>
+        <InsertType1 img={`img_scanitem.png`}>
+          <div className="panel2">
+            <Button href="fifthpage" color={'PRIMARY'} isBig={true} icon={"ic_magnifying.png"} isLeft={true}>Item Lookup</Button>
+          </div>
+          <div className="panel3">
+            <Button href="fifthpage" isDisabled={true} color={'OK'} isBig={true} icon={"ic_clickhere.png"} isLeft={true}>
+              <div className="pg1-text">
+                Click Here<br/><span className="pg1-text-small">to Process Scanned Items</span>
+              </div>
+            </Button>
+          </div>
+          <div className="panel4">
+            <Button href="sixthpage" color={'OK'}>Finish And Pay</Button>
+          </div>
+        </InsertType1>
+        <Bottom/>
+      </Container>
       <style jsx>{`
 
       `}</style>

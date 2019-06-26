@@ -1,5 +1,5 @@
 import * as React from "react";
-import Link from "./Link";
+import Link from "../Link";
 import AssistanceIconButton from "./AssistanceIconButton";
 import DisabledIconButton from "./DisabledIconButton";
 

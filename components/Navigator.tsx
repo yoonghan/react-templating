@@ -19,7 +19,7 @@ class Navigator extends React.PureComponent<NavigatorProps, NavigatorState> {
   }
 
   _checkpage = (isForward) => {
-    const paths = ["notindex.html", "/secondpage", "/thirdpage", "/fourthpage", "/fifthpage", "/sixthpage"];
+    const paths = ["notindex.html", "/secondpage", "/thirdpage", "/fourthpage", "/fifthpage", "/sixthpage", "/seventhpage", "/eightpage"];
     const pathname = window.location.pathname;
     let found = false;
     let toPathIndex = 0;

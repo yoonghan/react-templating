@@ -1,7 +1,13 @@
-import Logo from "./Logo";
-import * as Consts from "./Consts";
+import * as React from 'react';
+import * as Consts from "../Consts";
 
-const Receipt: React.SFC<any> = ({children, isCenter, isComplete, isInit}) => {
+export interface ReceiptProps {
+  isCenter?: boolean;
+  isComplete?: boolean;
+  isInit?: boolean;
+}
+
+const Receipt: React.SFC<ReceiptProps> = ({isCenter, isComplete, isInit}) => {
   return (
     <React.Fragment>
       <div className="receipt">

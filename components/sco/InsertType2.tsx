@@ -1,5 +1,4 @@
-import Logo from "./Logo";
-import * as Consts from "./Consts";
+import * as Consts from "../Consts";
 
 const InsertType2: React.SFC<any> = ({children, img}) => {
   return (

@@ -1,21 +1,21 @@
 import * as React from "react";
-import Link from "./Link";
-import * as Consts from "./Consts";
+import Link from "../Link";
+import * as Consts from "../Consts";
 
 export interface ButtonProps {
   href: string;
   icon?: string;
-  color: string;
+  color?: string;
   isLeft?: boolean;
+  isBig?: boolean;
+  isDisabled?: boolean;
 }
 
-const Button: React.SFC<ButtonProps> = ({href, icon, children, color, isLeft, isBig}) => {
+const Button: React.SFC<ButtonProps> = ({href, icon, children, color, isLeft, isBig, isDisabled}) => {
   function _getColor() {
     switch(color) {
       case "PRIMARY":
         return "rgba(17, 90, 167, 1)";
-      case "OK":
-        return "rgba(95, 167, 23, 1)";
       case "OK":
         return "rgba(95, 167, 23, 1)";
       case "RETURN":
@@ -83,8 +83,8 @@ const Button: React.SFC<ButtonProps> = ({href, icon, children, color, isLeft, is
 
   return (
     <React.Fragment>
-      <Link href={href}>
-        <div className="button">
+      <Link href={href} isRoot={false}>
+        <div className={`button${isDisabled?" disabled":""}`}>
           {_renderItem()}
         </div>
       </Link>
@@ -97,6 +97,10 @@ const Button: React.SFC<ButtonProps> = ({href, icon, children, color, isLeft, is
           color: #FFF;
           background-color: ${_getColor()};
           position: relative;
+        }
+        .disabled {
+          filter: grayscale(100%);
+          opacity: 0.3;
         }
       `}</style>
     </React.Fragment>

@@ -7,42 +7,38 @@ import Header from '../components/sco/Header';
 import Bottom from '../components/sco/Bottom';
 import Receipt from '../components/sco/Receipt';
 import Button from "../components/sco/Button";
-import InsertType1 from '../components/sco/InsertType1';
+import InsertType3 from '../components/sco/InsertType3';
 import Navigator from "../components/Navigator";
 
-const ThirdPage: React.SFC<any> = () => {
+const SeventhPage: React.SFC<any> = () => {
   return (
     <Navigator>
       <HtmlHead/>
       <Head>
-        <title>Carrefour C4 Project - 3</title>
-        <meta name="description" content="Third Page"/>
+        <title>Carrefour C4 Project - 7</title>
+        <meta name="description" content="SeventhPage Page"/>
       </Head>
-      <Link href="/fourthpage">
+      <Link href="/eightpage">
         <Container>
-          <Header>Scan Item and Place in Bag</Header>
-          <Receipt isInit={true}/>
-          <InsertType1 img={`ic_retrieve.gif`}>
+          <Header>Select Tender Type</Header>
+          <Receipt isCenter={true} isComplete={true}/>
+          <InsertType3>
+            <div className="panel1">
+              Please take your receipt
+            </div>
             <div className="panel2">
-              <div className="pg-3-text">Please wait while<br/>your order is retrieved</div>
+              <img src={`${Consts.GENERAL_IMG_FOLDER}img_printer.png`}/>
             </div>
-            <div className="panel3">
-
-            </div>
-            <div className="panel4">
-            </div>
-          </InsertType1>
+          </InsertType3>
           <Bottom/>
         </Container>
       </Link>
       <style jsx>{`
-        .pg-3-text {
-          text-align: center;
-        }
+
       `}</style>
       {Consts.GENERAL_STYLE}
     </Navigator>
   );
 }
 
-export default ThirdPage;
+export default SeventhPage;

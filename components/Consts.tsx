@@ -1,13 +1,23 @@
-export const GENERAL_IMG_FOLDER="../static/img/";
-export const GENERAL_CSS_FOLDER="../static/css/";
-export const OVERRIDE_URL=false;
+import getConfig from 'next/config';
+
+const {publicRuntimeConfig} = getConfig();
+let _OVERRIDE = "true";
+let _STATIC = "true";
+if(publicRuntimeConfig){
+  const {OVERRIDE, STATIC} = publicRuntimeConfig;
+  _OVERRIDE = OVERRIDE;
+  _STATIC = STATIC;
+}
+export const OVERRIDE_URL=(_OVERRIDE === "true");
+export const SHOW_STATIC=(_STATIC === "true");
+export const GENERAL_IMG_FOLDER=(OVERRIDE_URL?"..":"") + (SHOW_STATIC?"/static":"") + "/img/";
+export const GENERAL_CSS_FOLDER=(OVERRIDE_URL?"..":"") + (SHOW_STATIC?"/static":"") + "/css/";
 export const GENERAL_STYLE=(
   <style jsx global>
   {`
     html {
       font-size: 42px;
     }
-
     body {
       font-family: Roboto;
       padding: 0;

@@ -1,4 +1,5 @@
-import * as Consts from "./Consts";
+import * as React from 'react';
+import * as Consts from "../Consts";
 
 export interface ModalProps {
   content: string;

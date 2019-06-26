@@ -1,4 +1,4 @@
-import * as Consts from "../components/Consts";
+import * as Consts from "../Consts";
 
 const Header: React.SFC<any> = ({children}) => {
   return (

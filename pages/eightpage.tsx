@@ -10,7 +10,7 @@ import Button from "../components/sco/Button";
 import InsertType3 from '../components/sco/InsertType3';
 import Modal from '../components/sco/Modal';
 import Navigator from "../components/Navigator";
-import Image from "../components/sco/Image";
+import Image from "../components/Image";
 
 const EightPage: React.SFC<any> = () => {
 

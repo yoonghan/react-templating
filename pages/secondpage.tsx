@@ -9,7 +9,7 @@ import Receipt from '../components/sco/Receipt';
 import Button from "../components/sco/Button";
 import InsertType4 from '../components/sco/InsertType4';
 import Navigator from "../components/Navigator";
-import Image from "../components/sco/Image";
+import Image from "../components/Image";
 
 const SecondPage: React.SFC<any> = () => {
   return (

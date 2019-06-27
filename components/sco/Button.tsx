@@ -1,6 +1,6 @@
 import * as React from "react";
 import Link from "../Link";
-import Image from "./Image";
+import Image from "../Image";
 
 export interface ButtonProps {
   href: string;

@@ -3,7 +3,7 @@ import Head from 'next/head';
 import * as Consts from "../components/Consts";
 import { HtmlHead } from '../components/html/HtmlHead';
 import Navigator from "../components/Navigator";
-import Image from "../components/sco/Image";
+import Image from "../components/Image";
 
 const Index: React.SFC<any> = () => {
   return (

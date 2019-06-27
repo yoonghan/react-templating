@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as Consts from "../Consts";
+import * as Consts from "./Consts";
 
 export interface ImageProps {
   imgsrc: string;

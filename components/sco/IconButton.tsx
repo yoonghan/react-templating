@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "../Link";
 import * as Consts from "../Consts";
-import Image from "./Image";
+import Image from "../Image";
 
 export interface IconButtonProps {
   href: string;

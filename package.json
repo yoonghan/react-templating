@@ -4,7 +4,7 @@
   "description": "Self checkout system.",
   "scripts": {
     "build": "next build",
-    "export": "next build && next export && replace-in-file /=\\\"\\//g =\\\"./ out/index.html --isRegex && replace-in-file /=\\\"\\//g =\\\"../ out/**/*.html --isRegex",
+    "export": "next build && next export && replace-in-file /\\/img\\//g ../static/img/ out/**/* --isRegex && replace-in-file /=\\\"\\//g =\\\"./ out/index.html --isRegex && replace-in-file /=\\\"\\//g =\\\"../ out/**/*.html --isRegex",
     "dev": "node server.js",
     "start": "node server.js",
     "start-windows": "node server.js",

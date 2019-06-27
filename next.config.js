@@ -5,8 +5,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const withConfig = nextRuntimeDotenv({
   path: '.env',
   public: [
-    "OVERRIDE",
-    "STATIC"
+    "OVERRIDE"
   ]
 });
 

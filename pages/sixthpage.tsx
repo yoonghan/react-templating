@@ -10,7 +10,7 @@ import Button from "../components/sco/Button";
 import IconButton from "../components/sco/IconButton";
 import InsertType2 from '../components/sco/InsertType2';
 import Navigator from "../components/Navigator";
-import Image from "../components/sco/Image";
+import Image from "../components/Image";
 
 const SixthPage: React.SFC<any> = () => {
   return (

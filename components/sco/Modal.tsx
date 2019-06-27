@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as Consts from "../Consts";
+import Image from "./Image";
 
 export interface ModalProps {
   content: string;
@@ -14,7 +14,7 @@ const Modal: React.SFC<ModalProps> = ({title, content, imgsrc, callbackClose}) =
       <div className="modal" onClick={callbackClose}>
         <div className="modal-container">
           <div className="modal-panel">
-            <div><img src={`${Consts.GENERAL_IMG_FOLDER}${imgsrc}`}/></div>
+            <div><Image imgsrc={`${imgsrc}`}/></div>
             <div className="modal-title">{title}</div>
             <div>{content}</div>
           </div>

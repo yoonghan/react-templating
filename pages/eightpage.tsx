@@ -10,6 +10,7 @@ import Button from "../components/sco/Button";
 import InsertType3 from '../components/sco/InsertType3';
 import Modal from '../components/sco/Modal';
 import Navigator from "../components/Navigator";
+import Image from "../components/sco/Image";
 
 const EightPage: React.SFC<any> = () => {
 
@@ -32,7 +33,7 @@ const EightPage: React.SFC<any> = () => {
             Please take your receipt
           </div>
           <div className="panel2">
-            <img src={`${Consts.GENERAL_IMG_FOLDER}img_printer.png`}/>
+            <Image imgsrc={`img_printer.png`}/>
           </div>
         </InsertType3>
         <Bottom/>

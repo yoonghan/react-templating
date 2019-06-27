@@ -10,6 +10,7 @@ import Button from "../components/sco/Button";
 import IconButton from "../components/sco/IconButton";
 import InsertType2 from '../components/sco/InsertType2';
 import Navigator from "../components/Navigator";
+import Image from "../components/sco/Image";
 
 const SixthPage: React.SFC<any> = () => {
   return (
@@ -25,7 +26,7 @@ const SixthPage: React.SFC<any> = () => {
         <InsertType2 img={`${Consts.GENERAL_IMG_FOLDER}img_scanitem.png`}>
           <div className="panel1">Make your selection now</div>
           <div className="panel2">
-            <img src={`${Consts.GENERAL_IMG_FOLDER}ic_arrow.png`}/>
+            <Image imgsrc={`ic_arrow.png`}/>
           </div>
           <div className="panel3_1">
             <Button href="seventhpage" color={'BLACK'} icon="ic_credit.png">Credit</Button>

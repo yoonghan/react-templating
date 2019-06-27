@@ -9,6 +9,7 @@ import Receipt from '../components/sco/Receipt';
 import Button from "../components/sco/Button";
 import InsertType4 from '../components/sco/InsertType4';
 import Navigator from "../components/Navigator";
+import Image from "../components/sco/Image";
 
 const SecondPage: React.SFC<any> = () => {
   return (
@@ -25,7 +26,7 @@ const SecondPage: React.SFC<any> = () => {
           <InsertType4>
 
               <div className="panel1">
-                <img src={`${Consts.GENERAL_IMG_FOLDER}pssanimated.gif`}/>
+                <Image imgsrc={`pssanimated.gif`}/>
               </div>
               <div className="panel2">
                 <p>
@@ -35,7 +36,7 @@ const SecondPage: React.SFC<any> = () => {
                 </p>
               </div>
               <div className="panel3">
-                <img src={`${Consts.GENERAL_IMG_FOLDER}img_barcode.png`}/>
+                <Image imgsrc={`img_barcode.png`}/>
               </div>
           </InsertType4>
           <Bottom/>

@@ -1,6 +1,7 @@
 import * as React from "react";
 import Link from "../Link";
 import * as Consts from "../Consts";
+import Image from "./Image";
 
 export interface IconButtonProps {
   href: string;
@@ -24,7 +25,7 @@ const IconButton: React.SFC<IconButtonProps> = ({href, icon, children, color, is
   function _renderIcon() {
     return (
       <div className="withIcon">
-        <img src={`${Consts.GENERAL_IMG_FOLDER}${icon}`}/>
+        <Image imgsrc={`${icon}`}/>
         <div>{children}</div>
         <style jsx>{`
           .withIcon {

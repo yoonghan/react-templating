@@ -3,11 +3,9 @@ import Head from 'next/head';
 import * as Consts from "../components/Consts";
 import { HtmlHead } from '../components/html/HtmlHead';
 import Navigator from "../components/Navigator";
+import Image from "../components/sco/Image";
 
 const Index: React.SFC<any> = () => {
-
-  const adjustIndexFolder = Consts.OVERRIDE_URL?"./static/":"";
-
   return (
     <Navigator>
       <HtmlHead/>
@@ -17,11 +15,11 @@ const Index: React.SFC<any> = () => {
       </Head>
       <div className={'container'}>
         <Link href="/firstpage" isRoot={true}>
-          <img src={`${adjustIndexFolder}${Consts.GENERAL_IMG_FOLDER}homepage.png`}/>
+          <Image imgsrc={`homepage.png`} isIndexPage={true}/>
         </Link>
       </div>
       <style jsx>{`
-        .container img {
+        .container :global(img) {
           position: relative;
           width: 100%;
           height: 100%;

@@ -44,7 +44,7 @@ const InsertType4: React.SFC<any> = ({children, img}) => {
           margin: 0 auto;
         }
 
-        .panel1 img, .panel2 img, .panel3 img {
+        .panel1 :global(img), .panel2 :global(img), .panel3 :global(img) {
           width: 420px;
         }
       `}

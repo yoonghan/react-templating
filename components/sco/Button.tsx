@@ -1,6 +1,6 @@
 import * as React from "react";
 import Link from "../Link";
-import * as Consts from "../Consts";
+import Image from "./Image";
 
 export interface ButtonProps {
   href: string;
@@ -50,7 +50,7 @@ const Button: React.SFC<ButtonProps> = ({href, icon, children, color, isLeft, is
       <React.Fragment>
         <div className={"withIcon"}>
           <div className={"toLeft"}>
-            <div><img src={`${Consts.GENERAL_IMG_FOLDER}${icon}`}/></div>
+            <div><Image imgsrc={`${icon}`}/></div>
             <div>{children}</div>
           </div>
         </div>

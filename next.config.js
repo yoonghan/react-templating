@@ -2,19 +2,8 @@ const nextRuntimeDotenv = require('next-runtime-dotenv');
 const withTypescript = require("@zeit/next-typescript");
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
-const envPath = function() {
-  switch(process.env.RUNTIME) {
-    case "STORYBOOK":
-      return ".storybook";
-    case "EXPORT":
-      return ".export";
-    default:
-      return "";
-  }
-}();
-
 const withConfig = nextRuntimeDotenv({
-  path: '.env'+envPath,
+  path: '.env',
   public: [
     "OVERRIDE",
     "STATIC"

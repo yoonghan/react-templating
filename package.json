@@ -4,11 +4,11 @@
   "description": "Self checkout system.",
   "scripts": {
     "build": "next build",
-    "export": "set RUNTIME=EXPORT && next build && next export && replace-in-file /=\\\"\\//g =\\\"./ out/index.html --isRegex && replace-in-file /=\\\"\\//g =\\\"../ out/**/*.html --isRegex",
+    "export": "next build && next export && replace-in-file /=\\\"\\//g =\\\"./ out/index.html --isRegex && replace-in-file /=\\\"\\//g =\\\"../ out/**/*.html --isRegex",
     "dev": "node server.js",
     "start": "node server.js",
     "start-windows": "node server.js",
-    "storybook": "set RUNTIME=STORYBOOK && start-storybook -s ./static -p 9001 -c .storybook"
+    "storybook": "(set NODE_ENV=STORYBOOK) && start-storybook -s ./static -p 9001 -c .storybook"
   },
   "keywords": [
     "website",

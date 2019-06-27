@@ -1,13 +1,25 @@
 import getConfig from 'next/config';
 
-const {publicRuntimeConfig} = getConfig();
-let _OVERRIDE = "true";
-let _STATIC = "true";
-if(publicRuntimeConfig){
-  const {OVERRIDE, STATIC} = publicRuntimeConfig;
-  _OVERRIDE = OVERRIDE;
-  _STATIC = STATIC;
+let _OVERRIDE = "true"; //default setting according to next export
+let _STATIC = "true"; //default setting according to next export
+/**[1. S] These codes are to make possible for next export/next dev **/
+if(getConfig()) {
+  const {publicRuntimeConfig} = getConfig();
+  if(publicRuntimeConfig){
+    const {OVERRIDE, STATIC} = publicRuntimeConfig;
+    _OVERRIDE = OVERRIDE;
+    _STATIC = STATIC;
+  }
 }
+/**[1. E] **/
+/**[2. S] These codes are to make possible for storybook **/
+if(process.env && (process.env.NODE_ENV === "STORYBOOK")) {
+  console.log("HERE");
+  _OVERRIDE = "false";
+  _STATIC = "false";
+}
+/**[2. E]**/
+
 export const OVERRIDE_URL=(_OVERRIDE === "true");
 export const SHOW_STATIC=(_STATIC === "true");
 export const GENERAL_IMG_FOLDER=(OVERRIDE_URL?"..":"") + (SHOW_STATIC?"/static":"") + "/img/";

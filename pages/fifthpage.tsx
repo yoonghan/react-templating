@@ -27,8 +27,8 @@ const FifthPage: React.SFC<any> = () => {
           </div>
           <div className="panel3">
             <Button href="fifthpage" isDisabled={true} color={'OK'} isBig={true} icon={"ic_clickhere.png"} isLeft={true}>
-              <div className="pg1-text">
-                Click Here<br/><span className="pg1-text-small">to Process Scanned Items</span>
+              <div className="pg5-text">
+                Click Here<br/><span className="pg5-text-small">to Process Scanned Items</span>
               </div>
             </Button>
           </div>
@@ -39,7 +39,12 @@ const FifthPage: React.SFC<any> = () => {
         <Bottom/>
       </Container>
       <style jsx>{`
-
+        .pg5-text {
+          text-align: left;
+        }
+        .pg5-text-small {
+          font-size: 0.6rem;
+        }
       `}</style>
       {Consts.GENERAL_STYLE}
     </Navigator>

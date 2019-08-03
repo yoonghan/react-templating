@@ -18,8 +18,12 @@ class Navigator extends React.PureComponent<NavigatorProps, NavigatorState> {
     }
   }
 
+  _removeSlash = (href:string) => {
+    return href.indexOf("/")===0?href.substr(1):href;
+  }
+
   _checkpage = (isForward) => {
-    const paths = ["notindex.html", "/secondpage", "/thirdpage", "/fourthpage", "/fifthpage", "/sixthpage", "/seventhpage", "/eightpage"];
+    const paths = ["notindex.html", "/firstpage", "/secondpage", "/thirdpage", "/fourthpage", "/fifthpage", "/sixthpage", "/seventhpage", "/eightpage"];
     const pathname = window.location.pathname;
     let found = false;
     let toPathIndex = 0;
@@ -34,7 +38,10 @@ class Navigator extends React.PureComponent<NavigatorProps, NavigatorState> {
     toPathIndex = toPathIndex === -1? 0: toPathIndex;
     toPathIndex = toPathIndex > paths.length-1? 0: toPathIndex;
     const toPath = (toPathIndex ===0? "/": paths[toPathIndex]);
-    return ((Consts.OVERRIDE_URL ? (found ? "../": "./") + toPath + "/index.html": toPath));
+    const relativeLink = (found ? "../": "./");
+    const newPath = this._removeSlash(toPath);
+    const seperator = newPath===""?"":"/";
+    return ((Consts.OVERRIDE_URL ? (relativeLink + newPath + seperator + "index.html"): toPath));
   }
 
   _onClick = () => {

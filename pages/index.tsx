@@ -10,8 +10,8 @@ const Index: React.SFC<any> = () => {
     <Navigator>
       <HtmlHead/>
       <Head>
-        <title>Carrefour C4 Project</title>
-        <meta name="description" content="Carrefour C4 Project."/>
+        <title>Mocked Mocked Project</title>
+        <meta name="description" content="Mocked Mocked Project."/>
       </Head>
       <div className={'container'}>
         <Link href="/firstpage" isRoot={true}>

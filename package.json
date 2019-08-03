@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@storybook/addon-actions": "^4.0.2",
-    "@storybook/addon-info": "^4.0.2",
+    "@storybook/addon-info": "^5.1.10",
     "@storybook/react": "^4.0.2",
     "@types/d3": "^5.0.1",
     "@types/next": "^7.0.3",

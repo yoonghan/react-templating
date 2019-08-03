@@ -16,7 +16,7 @@ const SecondPage: React.SFC<any> = () => {
     <Navigator>
       <HtmlHead/>
       <Head>
-        <title>Carrefour C4 Project - 2</title>
+        <title>Mocked Mocked Project - 2</title>
         <meta name="description" content="Second Page"/>
       </Head>
       <Link href="/thirdpage">

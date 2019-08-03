@@ -16,7 +16,7 @@ const SeventhPage: React.SFC<any> = () => {
     <Navigator>
       <HtmlHead/>
       <Head>
-        <title>Carrefour C4 Project - 7</title>
+        <title>Mocked Mocked Project - 7</title>
         <meta name="description" content="SeventhPage Page"/>
       </Head>
       <Link href="/eightpage">

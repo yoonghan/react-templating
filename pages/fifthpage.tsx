@@ -15,7 +15,7 @@ const FifthPage: React.SFC<any> = () => {
     <Navigator>
       <HtmlHead/>
       <Head>
-        <title>Carrefour C4 Project - 5</title>
+        <title>Mocked Mocked Project - 5</title>
         <meta name="description" content="Fifth Page"/>
       </Head>
       <Container>

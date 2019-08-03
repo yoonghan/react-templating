@@ -22,7 +22,7 @@ const EightPage: React.SFC<any> = () => {
     <Navigator>
       <HtmlHead/>
       <Head>
-        <title>Carrefour C4 Project - 8</title>
+        <title>Mocked Mocked Project - 8</title>
         <meta name="description" content="EightPage Page"/>
       </Head>
       <Container>

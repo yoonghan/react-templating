@@ -1,5 +1,5 @@
-# Carrefour project template
-Created a template for carrefour. The design needs to be improved.
+# Mocked project template
+Created a template for Mocked. The design needs to be improved.
 
 ## Usage
 1. Run npm install

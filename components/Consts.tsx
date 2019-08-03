@@ -27,7 +27,7 @@ export const GENERAL_STYLE=(
       justify-content: center;
     }
     body::before {
-      // content: 'Carrefour Screen Design';
+      // content: 'Mocked Screen Design';
       // margin-bottom: 10px;
       // text-align: center;
       // font-size: 0.7rem;

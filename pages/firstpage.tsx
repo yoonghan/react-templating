@@ -15,7 +15,7 @@ const FirstPage: React.SFC<any> = () => {
     <Navigator>
       <HtmlHead/>
       <Head>
-        <title>Carrefour C4 Project - 1</title>
+        <title>Mocked Mocked Project - 1</title>
         <meta name="description" content="First Page"/>
       </Head>
       <Container>

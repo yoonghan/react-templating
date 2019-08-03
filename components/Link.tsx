@@ -9,14 +9,14 @@ interface LinkProps {
 }
 
 const _removeSlash = (href:string) => {
+  if(href==="/" || href==="") {
+    return "index";
+  }
   return href.indexOf("/")===0?href.substr(1):href;
 }
 
-const Link: React.SFC<LinkProps> = ({ href, children, isRoot }) => {
-  const relativeLink = (isRoot ? "./": "../");
-  const newPath = _removeSlash(href);
-  const seperator = newPath===""?"":"/";
-  let newHref = (Consts.OVERRIDE_URL? (relativeLink + newPath + seperator + "index.html"): href);
+const Link: React.SFC<LinkProps> = ({ href, children }) => {
+  let newHref = (Consts.OVERRIDE_URL ? ("./"+_removeSlash(href)+".html"): href);
   return (
     <React.Fragment>
       <Anchor href={newHref}>

@@ -1,4 +1,3 @@
-import Link from '../components/Link';
 import Head from 'next/head';
 import * as Consts from "../components/Consts";
 import { HtmlHead } from '../components/html/HtmlHead';

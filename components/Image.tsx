@@ -6,13 +6,11 @@ export interface ImageProps {
   isIndexPage?: boolean;
 }
 
-const Image: React.SFC<ImageProps> = ({isIndexPage, imgsrc}) => {
+const Image: React.SFC<ImageProps> = ({imgsrc}) => {
   //Created that this is not in subfolders.
-  const adjustIndexFolder = (isIndexPage? (Consts.OVERRIDE_URL?"./static/":""): "");
-
   return (
     <React.Fragment>
-      <img src={`${adjustIndexFolder}${Consts.GENERAL_IMG_FOLDER}${imgsrc}`}/>
+      <img src={`${Consts.GENERAL_IMG_FOLDER}${imgsrc}`}/>
     </React.Fragment>
   )
 }

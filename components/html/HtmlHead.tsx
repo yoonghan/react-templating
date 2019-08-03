@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import Head from 'next/head';
-import * as Consts from "../Consts";
 
 export const HtmlHead: React.SFC<any> = () => {
   return (

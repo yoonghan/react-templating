@@ -6,7 +6,6 @@ import { Container } from '../components/sco/Container';
 import Header from '../components/sco/Header';
 import Bottom from '../components/sco/Bottom';
 import Receipt from '../components/sco/Receipt';
-import Button from "../components/sco/Button";
 import InsertType1 from '../components/sco/InsertType1';
 import Navigator from "../components/Navigator";
 

@@ -1,3 +1,4 @@
+import * as React from "react";
 import * as Consts from "../Consts";
 
 const Header: React.SFC<any> = ({children}) => {

@@ -1,5 +1,4 @@
 import * as React from "react";
-import produce from "immer";
 import * as Consts from "./Consts";
 
 interface NavigatorProps {
@@ -19,37 +18,28 @@ class Navigator extends React.PureComponent<NavigatorProps, NavigatorState> {
   }
 
   _removeSlash = (href:string) => {
+    if(href==="/" || href==="") {
+      return "index";
+    }
     return href.indexOf("/")===0?href.substr(1):href;
   }
 
-  _checkpage = (isForward) => {
+  _checkpage = (isForward:boolean) => {
     const paths = ["notindex.html", "/firstpage", "/secondpage", "/thirdpage", "/fourthpage", "/fifthpage", "/sixthpage", "/seventhpage", "/eightpage"];
     const pathname = window.location.pathname;
-    let found = false;
     let toPathIndex = 0;
     for(let i=0; i<paths.length; i++) {
       if(pathname.indexOf(paths[i]) > -1) {
         toPathIndex = i;
-        found = true;
         break;
       }
     }
     toPathIndex = toPathIndex + (isForward ? 1: -1);
     toPathIndex = toPathIndex === -1? 0: toPathIndex;
     toPathIndex = toPathIndex > paths.length-1? 0: toPathIndex;
-    const toPath = (toPathIndex ===0? "/": paths[toPathIndex]);
-    const relativeLink = (found ? "../": "./");
-    const newPath = this._removeSlash(toPath);
-    const seperator = newPath===""?"":"/";
-    return ((Consts.OVERRIDE_URL ? (relativeLink + newPath + seperator + "index.html"): toPath));
-  }
+    const toPath = (toPathIndex ===0? (Consts.OVERRIDE_URL?"index":"/"): paths[toPathIndex]);
 
-  _onClick = () => {
-    this.setState(
-      produce<NavigatorState>(draft => {
-
-      })
-    );
+    return (Consts.OVERRIDE_URL ? ("./"+this._removeSlash(toPath)+".html"): toPath);
   }
 
   _prevClick = () => {

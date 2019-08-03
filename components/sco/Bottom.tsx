@@ -1,17 +1,16 @@
 import * as React from "react";
-import Link from "../Link";
 import AssistanceIconButton from "./AssistanceIconButton";
 import DisabledIconButton from "./DisabledIconButton";
 
 export interface BottomProps {
 }
 
-const Bottom: React.SFC<BottomProps> = ({children}) => {
+const Bottom: React.SFC<BottomProps> = () => {
   return (
     <React.Fragment>
       <div className="footer bottom-container">
         <DisabledIconButton/>
-        <AssistanceIconButton color="WARN">Request Help</AssistanceIconButton>
+        <AssistanceIconButton>Request Help</AssistanceIconButton>
       </div>
       <style jsx>{`
         .bottom-container {

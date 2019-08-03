@@ -1,7 +1,5 @@
 import * as React from "react";
-import produce from "immer";
 import IconButton from "./IconButton";
-import Modal from "./Modal";
 
 interface DisabledIconButtonProps {
 
@@ -24,7 +22,7 @@ class DisabledIconButton extends React.PureComponent<DisabledIconButtonProps, Di
   render() {
     return (
       <React.Fragment>
-        <IconButton icon="ic_disable.png" onClick={this._onClick}></IconButton>
+        <IconButton icon="ic_disable.png" onClick={this._onClick} color="OTHERS"></IconButton>
       </React.Fragment>
       );
   }

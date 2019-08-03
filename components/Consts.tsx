@@ -1,15 +1,23 @@
-import getConfig from 'next/config';
-
 let _OVERRIDE = "true"; //default setting according to next export
 /**[1. S] These codes are to make possible for next export/next dev **/
-if((getConfig && getConfig() && getConfig().publicRuntimeConfig) || process.env.NODE_ENV === "STORYBOOK") {
+if(process.env.NODE_ENV === "development") {
   _OVERRIDE = "false";
 }
 /**[1. E] **/
 
 export const OVERRIDE_URL=(_OVERRIDE === "true");
-export const GENERAL_IMG_FOLDER="/img/";
+const adjustIndexFolder = (OVERRIDE_URL?"./static/":"");
+export const GENERAL_IMG_FOLDER=adjustIndexFolder+"/img/";
 export const GENERAL_CSS_FOLDER="/css/";
+export const GENERAL_STYLE_STORYBOOK = (
+  <style jsx global>
+  {`
+    body::after {
+      content: none;
+    }
+  `}
+  </style>
+)
 export const GENERAL_STYLE=(
   <style jsx global>
   {`

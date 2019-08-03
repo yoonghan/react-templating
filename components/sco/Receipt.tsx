@@ -7,7 +7,9 @@ export interface ReceiptProps {
   isInit?: boolean;
 }
 
+
 const Receipt: React.SFC<ReceiptProps> = ({isCenter, isComplete, isInit}) => {
+
   return (
     <React.Fragment>
       <div className="receipt">

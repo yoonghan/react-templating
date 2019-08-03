@@ -1,6 +1,6 @@
-import * as Consts from "../Consts";
+import * as React from "react";
 
-const InsertType2: React.SFC<any> = ({children, img}) => {
+const InsertType2: React.SFC<any> = ({children}) => {
   return (
     <React.Fragment>
       <div className="insert">

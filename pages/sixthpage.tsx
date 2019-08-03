@@ -1,4 +1,3 @@
-import Link from '../components/Link';
 import Head from 'next/head';
 import * as Consts from "../components/Consts";
 import { HtmlHead } from '../components/html/HtmlHead';
@@ -7,7 +6,6 @@ import Header from '../components/sco/Header';
 import Bottom from '../components/sco/Bottom';
 import Receipt from '../components/sco/Receipt';
 import Button from "../components/sco/Button";
-import IconButton from "../components/sco/IconButton";
 import InsertType2 from '../components/sco/InsertType2';
 import Navigator from "../components/Navigator";
 import Image from "../components/Image";

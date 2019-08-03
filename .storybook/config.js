@@ -8,12 +8,12 @@ function loadStories() {
   // You can require as many stories as you need.
 }
 
-addDecorator(
-  withInfo({
-    inline: true,
-    header: false,
-    source: true
-  })
-);
+// addDecorator(
+//   withInfo({
+//     inline: true,
+//     header: false,
+//     source: true
+//   })
+// );
 
 configure(loadStories, module);

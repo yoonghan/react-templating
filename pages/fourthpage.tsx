@@ -6,8 +6,6 @@ import { Container } from '../components/sco/Container';
 import Header from '../components/sco/Header';
 import Bottom from '../components/sco/Bottom';
 import Receipt from '../components/sco/Receipt';
-import Button from "../components/sco/Button";
-import IconButton from "../components/sco/IconButton";
 import InsertType1 from '../components/sco/InsertType1';
 import Navigator from "../components/Navigator";
 
@@ -22,7 +20,7 @@ const FourthPage: React.SFC<any> = () => {
       <Link href="/fifthpage">
         <Container>
           <Header>Scan Item and Place in Bag</Header>
-          <Receipt t isInit={true}/>
+          <Receipt isInit={true}/>
           <InsertType1 img={`ic_retrieve_error.png`}>
             <div className="panel2">
               <div className="pg-4-text">Your scanned order<br/>cannot be retrieved.</div>

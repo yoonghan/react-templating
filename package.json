@@ -4,11 +4,11 @@
   "description": "Self checkout system.",
   "scripts": {
     "build": "next build",
-    "export": "next build && next export && replace-in-file /\\/img\\//g ../static/img/ out/**/* --isRegex && replace-in-file /=\\\"\\//g =\\\"./ out/index.html --isRegex && replace-in-file /=\\\"\\//g =\\\"../ out/**/*.html --isRegex",
+    "export": "next build && next export && replace-in-file /=\\\"\\//g =\\\"./ out/index.html --isRegex && replace-in-file /=\\\"\\//g =\\\"./ out/**/*.html --isRegex",
     "dev": "node server.js",
     "start": "node server.js",
     "start-windows": "node server.js",
-    "storybook": "(set NODE_ENV=STORYBOOK) && start-storybook -s ./static -p 9001 -c .storybook"
+    "storybook": "start-storybook -s ./static -p 9001 -c .storybook"
   },
   "keywords": [
     "website",
@@ -22,20 +22,21 @@
     "express": "^4.14.0",
     "helmet": "^3.14.0",
     "hsts": "^2.1.0",
-    "next": "^7.0.2",
+    "next": "^9.0.2",
     "next-runtime-dotenv": "^1.1.1",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "replace-in-file": "^4.1.0"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^4.0.2",
+    "@emotion/core": "^10.0.15",
     "@storybook/addon-info": "^5.1.10",
-    "@storybook/react": "^4.0.2",
+    "@storybook/preset-typescript": "^1.1.0",
+    "@storybook/react": "^5.1.9",
     "@types/d3": "^5.0.1",
     "@types/next": "^7.0.3",
-    "@types/react": "^16.4.18",
-    "@types/react-dom": "^16.0.9",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.5",
     "@types/storybook__addon-info": "^3.4.2",
     "@types/storybook__react": "^3.0.9",
     "@types/styled-jsx": "^2.2.7",
@@ -46,9 +47,10 @@
     "babel-loader": "^8.0.4",
     "babel-preset-env": "^1.7.0",
     "d3": "^5.7.0",
-    "fork-ts-checker-webpack-plugin": "^0.4.14",
+    "fork-ts-checker-webpack-plugin": "^1.5.0",
     "immer": "^1.7.4",
+    "react-docgen-typescript-loader": "^3.1.0",
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
-    "typescript": "^3.1.6"
+    "typescript": "^3.5.3"
   }
 }

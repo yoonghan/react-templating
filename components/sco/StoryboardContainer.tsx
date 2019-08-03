@@ -8,6 +8,7 @@ const StoryboardContainer: React.SFC<any> = ({children}) => {
         {children}
       </div>
       {Consts.GENERAL_STYLE}
+      {Consts.GENERAL_STYLE_STORYBOOK}
     </React.Fragment>
   );
 }

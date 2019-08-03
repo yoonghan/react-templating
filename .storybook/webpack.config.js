@@ -1,12 +1,29 @@
 const path = require('path');
-const TSDocgenPlugin = require('react-docgen-typescript-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
-module.exports = (baseConfig, env, defaultConfig) => {
-  defaultConfig.module.rules.push({
+module.exports = ({ config }) => {
+  config.module.rules.push({
     test: /\.(ts|tsx)$/,
-    loader: ['babel-loader', 'awesome-typescript-loader']
+    use: [
+      {
+        loader: require.resolve("babel-loader")
+      },
+      {
+        loader: require.resolve("awesome-typescript-loader")
+      },
+      {
+        loader: require.resolve("react-docgen-typescript-loader")
+      }
+    ]
   });
-  defaultConfig.plugins.push(new TSDocgenPlugin());
-  defaultConfig.resolve.extensions.push('.ts', '.tsx');
-  return defaultConfig;
+  config.resolve.extensions.push(".ts", ".tsx");
+  /**Resolves to not use tslint, awesome typescript sends error immediately, forkts relies on linting.**/
+  // config.plugins.push(
+  //   new ForkTsCheckerWebpackPlugin({
+  //     async: false,
+  //     checkSyntacticErrors: true,
+  //     formatter: require('react-dev-utils/typescriptFormatter'),
+  //   })
+  // )
+  return config;
 };

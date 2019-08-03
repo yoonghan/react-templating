@@ -1,3 +1,4 @@
+import * as React from "react";
 import * as Consts from "../Consts";
 
 const InsertType1: React.SFC<any> = ({children, img, isDisabled}) => {

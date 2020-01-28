@@ -19,6 +19,7 @@ npm run export
 npm run storybook
 
 \\For hosting
+\\Future changes is to checkout https://nextjs.org/docs/api-reference/next.config.js/exportPathMap, that will always build a .html page
 npm run build
 npm run start
 ```
